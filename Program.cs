@@ -49,10 +49,30 @@ internal class Program
                     break;
             }
         }
-
-
-
+        Console.Clear();
+        Console.WriteLine("Has salido del programa.");
+        Console.WriteLine($"La suma total de los números recorridos es: {sumaTotal}");
     }
+
+    /// <summary>
+    /// Llena una matriz con números aleatorios entre 1 y 9.
+    /// </summary>
+    static void LlenarMatrizConAleatorios(int[,] matriz)
+    {
+        Random rand = new Random();
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                matriz[i, j] = rand.Next(1, 10);
+            }
+        }
+        matriz[0, 0] = 0; // Número base en (0,0)
+    }
+
+
+
+}
 }
 
 
