@@ -93,6 +93,18 @@ internal class Program
         }
         Console.ResetColor();
     }
+    /// <summary>
+    /// Mueve la posición actual, suma el valor en la nueva posición y marca la posición previa con 0.
+    /// </summary>
+    static void Mover(ref int posX, ref int posY, int nuevoX, int nuevoY, int[,] matriz, ref int sumaTotal)
+    {
+        sumaTotal += matriz[nuevoX, nuevoY]; // Sumar el valor de la nueva posición
+        matriz[posX, posY] = 0; // Marcar la posición previa como 0
+        posX = nuevoX;
+        posY = nuevoY;
+        // No actualizamos la matriz[nuevoX, nuevoY] a 0, ya que la suma total se refleja en MostrarMatriz
+    }
+}
 
 
 
