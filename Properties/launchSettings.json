@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Parcial_Final": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
