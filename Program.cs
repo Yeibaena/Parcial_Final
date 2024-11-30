@@ -69,6 +69,30 @@ internal class Program
         }
         matriz[0, 0] = 0; // Número base en (0,0)
     }
+    /// <summary>
+    /// Muestra la matriz en consola, coloreando la posición actual en verde.
+    /// </summary>
+    static void MostrarMatriz(int[,] matriz, int posX, int posY, int sumaTotal)
+    {
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                if (i == posX && j == posY)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write($"{sumaTotal} ");
+                }
+                else
+                {
+                    Console.ResetColor();
+                    Console.Write($"{matriz[i, j]} ");
+                }
+            }
+            Console.WriteLine();
+        }
+        Console.ResetColor();
+    }
 
 
 
