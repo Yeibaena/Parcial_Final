@@ -18,10 +18,20 @@ internal class Program
         bool salir = false;
         while (!salir)
         {
+            Console.Clear();
+            MostrarMatriz(matriz, posX, posY, sumaTotal);
+
+            Console.WriteLine($"\nSuma acumulada: {sumaTotal}");
+            Console.WriteLine("Presione las flechas para moverse o 'Esc' para salir.");
+            var tecla = Console.ReadKey(true);
+
+            // Movimiento basado en la tecla
+            switch (tecla.Key)
+            {
 
 
 
-    }
+            }
 }
 
 
