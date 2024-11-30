@@ -54,9 +54,9 @@ internal class Program
         Console.WriteLine($"La suma total de los números recorridos es: {sumaTotal}");
     }
 
-    /// <summary>
+
     /// Llena una matriz con números aleatorios entre 1 y 9.
-    /// </summary>
+
     static void LlenarMatrizConAleatorios(int[,] matriz)
     {
         Random rand = new Random();
@@ -69,9 +69,9 @@ internal class Program
         }
         matriz[0, 0] = 0; // Número base en (0,0)
     }
-    /// <summary>
+
     /// Muestra la matriz en consola, coloreando la posición actual en verde.
-    /// </summary>
+
     static void MostrarMatriz(int[,] matriz, int posX, int posY, int sumaTotal)
     {
         for (int i = 0; i < matriz.GetLength(0); i++)
@@ -108,8 +108,7 @@ internal class Program
 
 
 
-}
-}
+
 
 
 
