@@ -28,10 +28,31 @@ internal class Program
             // Movimiento basado en la tecla
             switch (tecla.Key)
             {
+                case ConsoleKey.UpArrow:
+                    if (posX > 0) Mover(ref posX, ref posY, posX - 1, posY, matriz, ref sumaTotal);
+                    break;
 
+                case ConsoleKey.DownArrow:
+                    if (posX < rows - 1) Mover(ref posX, ref posY, posX + 1, posY, matriz, ref sumaTotal);
+                    break;
 
+                case ConsoleKey.LeftArrow:
+                    if (posY > 0) Mover(ref posX, ref posY, posX, posY - 1, matriz, ref sumaTotal);
+                    break;
 
+                case ConsoleKey.RightArrow:
+                    if (posY < cols - 1) Mover(ref posX, ref posY, posX, posY + 1, matriz, ref sumaTotal);
+                    break;
+
+                case ConsoleKey.Escape:
+                    salir = true;
+                    break;
             }
+        }
+
+
+
+    }
 }
 
 
